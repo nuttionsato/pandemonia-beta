@@ -54,7 +54,7 @@ nav ul li:hover::after{
     opacity: 1;
 }
 #preloader{
-    background-color: #000;
+    background-color: #000 url(https://cdn.discordapp.com/attachments/1114347738096742440/1115301331251511326/SsScQaMAAAAABJRU5ErkJggg.png) no-repeat center center;
     height: 100vh;
     width: 100%;
     position: fixed;
