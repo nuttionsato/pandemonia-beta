@@ -1,69 +1,89 @@
-* {
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-.container {
-    background-color: #2F3136;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
     width: 100%;
-    height: 100vh;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+  }
+  
+  .sidebar p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-nav {
-    background: #2F3136;
-    border-radius: 50px;
-    padding-left: 10px;
-    box-shadow: 0 25px 28px -28px rgba(0, 0, 0, 0.4);
-}
-
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 13px 35px;
-    margin: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #777;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    transition: color 0.5s;
-}
-
-nav ul li::after {
-    content: '';
-    background: #f44566;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    opacity: 0;
-    transition: top 0.5s, opacity 0.5s;
-}
-
-nav ul li:hover {
-    color: #fff;
-}
-
-nav ul li:hover::after {
-    top: 50%;
-    opacity: 1;
-}
-
-#preloader {
-    background-color: #000 url(https://cdn.discordapp.com/attachments/1114347738096742440/1115301331251511326/SsScQaMAAAAABJRU5ErkJggg.png) no-repeat center center;
-    background-size: 15%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
+    z-index: 9999;
+  }
+  
+  #preloader:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
